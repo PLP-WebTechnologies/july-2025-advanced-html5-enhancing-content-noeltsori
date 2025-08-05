@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Training Sessions</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0 auto;
+            max-width: 900px;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        h1, h2 {
+            color: #1a1a1a;
+        }
+        header, section, footer {
+            margin-bottom: 40px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        table, th, td {
+            border: 1px solid #dee2e6;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #e9ecef;
+            font-weight: bold;
+        }
+        video {
+            max-width: 100%;
+            height: auto;
+        }
+        fieldset {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+        legend {
+            font-weight: bold;
+            padding: 0 10px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: 600;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 4px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+        }
+        .submit-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            table, th, td {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Gym Training Sessions</h1>
+        <p>This page showcases our gym training programs, including equipment lists, schedules, media, and a registration form for personalized sessions.</p>
+    </header>
+
+    <section aria-labelledby="equipment-heading">
+        <h2 id="equipment-heading">Essential Gym Equipment</h2>
+        <ul>
+            <li>Dumbbells</li>
+            <li>Treadmill</li>
+            <li>Resistance Bands</li>
+            <li>Kettlebells</li>
+        </ul>
+    </section>
+
+    <section aria-labelledby="schedule-heading">
+        <h2 id="schedule-heading">Weekly Training Schedule</h2>
+        <table>
+            <caption>Weekly Gym Training Schedule</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Day</th>
+                    <th scope="col">Session Type</th>
+                    <th scope="col">Duration (Hours)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Monday</td>
+                    <td>Strength Training</td>
+                    <td>1.5</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>Cardio</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>HIIT (High-Intensity Interval Training)</td>
+                    <td>1</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section aria-labelledby="video-heading">
+        <h2 id="video-heading">Watch Our Training Tutorial</h2>
+        <figure>
+            <video controls width="100%">
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <figcaption>Sample gym training tutorial video demonstrating proper exercise techniques.</figcaption>
+        </figure>
+    </section>
+
+    <section aria-labelledby="form-heading">
+        <h2 id="form-heading">Gym Session Registration Form</h2>
+        <form action="#" method="POST" novalidate>
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="fullname">Full Name *</label>
+                <input type="text" id="fullname" name="fullname" required placeholder="John Doe" minlength="3" autocomplete="name" pattern="[A-Za-z\s]{3,50}" title="Name must be 3-50 characters, letters and spaces only">
+
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required placeholder="example@email.com" autocomplete="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Enter a valid email address">
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="e.g. 0712345678" autocomplete="tel" pattern="[0-9]{10}" title="Phone number must be 10 digits">
+            </fieldset>
+
+            <fieldset>
+                <legend>Training Preferences</legend>
+                <label for="username">Username *</label>
+                <input type="text" id="username" name="username" required minlength="4" placeholder="Enter username" autocomplete="username" pattern="[A-Za-z0-9]{4,20}" title="Username must be 4-20 alphanumeric characters">
+
+                <label for="password">Password *</label>
+                <input type="password" id="password" name="password" required minlength="6" placeholder="Enter password" pattern="(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}" title="Password must be at least 6 characters, including a letter and a number">
+
+                <label for="confirm">Confirm Password *</label>
+                <input type="password" id="confirm" name="confirm" required minlength="6" placeholder="Confirm password" pattern="(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}" title="Passwords must match">
+
+                <label>
+                    <input type="checkbox" name="terms" required aria-describedby="terms-desc">
+                    I agree to the gym's terms and conditions
+                    <span id="terms-desc" class="sr-only">Required to proceed with registration</span>
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Session Details</legend>
+                <label for="dob">Date of Birth *</label>
+                <input type="date" id="dob" name="dob" required min="1900-01-01" max="2025-08-05" title="Select your date of birth">
+
+                <label for="session">Preferred Session Type *</label>
+                <select id="session" name="session" required aria-required="true">
+                    <option value="">-- Select Session Type --</option>
+                    <option value="strength">Strength Training</option>
+                    <option value="cardio">Cardio</option>
+                    <option value="hiit">HIIT</option>
+                </select>
+
+                <label for="goals">Fitness Goals</label>
+                <textarea id="goals" name="goals" rows="4" placeholder="Describe your fitness goals..." maxlength="500"></textarea>
+            </fieldset>
+
+            <button type="submit" class="submit-btn">Register for Session</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Gym Training Program</p>
+    </footer>
+</body>
+</html>
